@@ -1,0 +1,357 @@
+{
+	"photoOf": "Photo of {{name}}",
+	"from": "From",
+	"to": "To",
+	"item": "{{count}} item",
+	"items": "{{count}} items",
+	"product": "{{count}} product",
+	"products": "{{count}} products",
+	"layout": {
+		"banner": "Sign up and get 20% off to your first order.",
+		"signup": "Sign Up Now"
+	},
+	"navigation": {
+		"searchPlaceholder": "Search...",
+		"li": {
+			"home": "Home",
+			"shop": "Shop",
+			"about": "About",
+			"contact": "Contact"
+		},
+		"actions": {
+			"language": "Language",
+			"store": "Store",
+			"account": "Account",
+			"admin": "Admin",
+			"messages": "Messages",
+			"categories": "Categories",
+			"logOut": "Log out"
+		}
+	},
+	"languages": {
+		"en": "English",
+		"fr": "Francais",
+		"ar": "العربية"
+	},
+	"home": {
+		"hero": {
+			"titlePrefix": "Your One-Stop Shop for",
+			"titleHighlight": "Everything",
+			"description": "Discover premium products at competitive prices, with fast shipping and exceptional customer service.",
+			"shopNow": "Shop now",
+			"freeShipping": "Free shipping over $50",
+			"support": "24/7 Customer Support"
+		},
+		"categories": {
+			"title": "Shop by Category",
+			"description": "Find the perfect device for your needs from our curated collections"
+		},
+		"featuredProducts": "Featured Products",
+		"featuredProductsDescription": "We offer the best shopping experience with premium features",
+		"viewAllProducts": "View all products",
+		"whyChooseUs": {
+			"title": "Why Choose Us",
+			"description": "We offer the best shopping experience with premium features",
+			"cards": {
+				"freeShipping": {
+					"title": "Free Shipping",
+					"description": "Free shipping on all orders over $50. Fast and reliable delivery to your doorstep."
+				},
+				"secureCheckout": {
+					"title": "Secure Checkout",
+					"description": "Your payment information is always safe and secure with us. We use industry-leading encryption."
+				},
+				"support": {
+					"title": "24/7 Support",
+					"description": "Our customer support team is always available to help with any questions or concerns."
+				},
+				"qualityGuarantee": {
+					"title": "Quality Guarantee",
+					"description": "We stand behind the quality of every product we sell. 30-day money-back guarantee."
+				}
+			}
+		},
+		"testimonials": {
+			"one": "One of the best purchases. Great, easy and safe to use.",
+			"two": "Simply a very elegant piece of hardware, with a gorgeous UI in the app.",
+			"three": "Delivery was awesome. One day. Payment was simple. Product is perfect and safe.",
+			"four": "Setup was quick, and everything works flawlessly. Highly recommend!"
+		}
+	},
+	"footer": {
+		"description": "Your one-stop shop for everything tech. Premium products at competitive prices.",
+		"shopTitle": "Shop",
+		"allProducts": "All Products",
+		"companyTitle": "Company",
+		"aboutUs": "About Us",
+		"careers": "Careers",
+		"blog": "Blog",
+		"press": "Press",
+		"contact": "Contact",
+		"supportTitle": "Support",
+		"helpCenter": "Help Center",
+		"shippingAndReturns": "Shipping & Returns",
+		"warranty": "Warranty",
+		"privacyPolicy": "Privacy Policy",
+		"termsOfService": "Terms of Service",
+		"allRightsReserved": "All rights reserved.",
+		"privacy": "Privacy",
+		"terms": "Terms",
+		"cookies": "Cookies",
+		"sitemap": "Sitemap"
+	},
+	"productPage": {
+		"home": "Home",
+		"discountOff": "Off",
+		"accordion": {
+			"description": "Description",
+			"shippingRefundPolicy": "Shipping and Refund Policy",
+			"sellerInformation": "Seller Information",
+			"sellingSince": "Selling since"
+		},
+		"dialog": {
+			"trigger": "Write a review",
+			"title": "Write a review",
+			"description": "Please rate your experience and share any additional feedback.",
+			"rating": "Rating",
+			"feedback": "Additional feedback",
+			"feedbackPlaceholder": "Describe your experience...",
+			"cancel": "Cancel",
+			"submit": "Submit",
+			"successToast": "Your review is sent successfully!"
+		},
+		"actions": {
+			"addToCart": "Add to cart",
+			"buyNow": "Buy it now",
+			"removeFromFavorites": "Remove from favorites",
+			"addToFavorites": "Add to favorites",
+			"previousImage": "Previous image",
+			"nextImage": "Next image"
+		},
+		"similarProducts": "Similar Products",
+		"ratingAndReviews": "Rating and reviews",
+		"reviewsCount": "{{count}} reviews",
+		"noReviewsTitle": "Nothing here... yet.",
+		"noReviewsDescription": "Customers who have purchased this product have not yet submitted any reviews."
+	},
+	"about": {
+		"title": "What is {{name}}?",
+		"communityTitle": "A community doing good",
+		"communityText": "{{name}} is a global online marketplace, where people come together to make, sell, buy, and collect unique items. We're also a community pushing for positive change for small businesses, people, and the planet. Here are some of the ways we're making a positive impact, together.",
+		"creatorsTitle": "Support independent creators",
+		"creatorsText": "There's no {{name}} warehouse, just millions of people selling the things they love. We make the whole process easy, helping you connect directly with makers to find something extraordinary.",
+		"peaceTitle": "Peace of mind",
+		"peaceText": "Your privacy is the highest priority of our dedicated team. And if you ever need assistance, we are always ready to step in for support.",
+		"question": "Have a question? Contact us here.",
+		"contact": "Contact"
+	},
+	"signinPage": {
+		"title": "Login to your account",
+		"description": "Enter your email below to login to your account",
+		"loggingIn": "Logging in...",
+		"login": "Login",
+		"loginWithGoogle": "Login with Google",
+		"noAccount": "Don't have an account?",
+		"signUp": "Sign up"
+	},
+	"signupPage": {
+		"title": "Create an account",
+		"description": "Enter your information below to create your account",
+		"emailHelp": "We'll use this to contact you. We will not share your email with anyone else.",
+		"passwordHelp": "Must be at least 8 characters long.",
+		"confirmPasswordHelp": "Please confirm your password.",
+		"creatingAccount": "Creating account...",
+		"createAccount": "Create account",
+		"signUpWithGoogle": "Sign up with Google",
+		"alreadyHaveAccount": "Already have an account?",
+		"signIn": "Sign in"
+	},
+	"productsPage": {
+		"allFilters": "All filters",
+		"search": "Search",
+		"category": "Category",
+		"above": "Above",
+		"under": "Under",
+		"rating": "Rating",
+		"showingProducts": "Showing {{count}} Products",
+		"sortBy": "Sort by",
+		"sort": {
+			"relevancy": "Relevancy",
+			"mostPopular": "Most popular",
+			"lowPrice": "Low price",
+			"highPrice": "High price"
+		},
+		"filters": "Filters",
+		"selectCategory": "Select Category",
+		"name": "Name",
+		"namePlaceholder": "e.g., notebook, wall, and printer",
+		"priceRange": "Price Range",
+		"applyFilter": "Apply filter"
+	},
+	"cartPage": {
+		"title": "Your Cart",
+		"empty": {
+			"title": "Nothing here... yet.",
+			"description": "Add items to your cart to see them here when you're ready to check out.",
+			"continueShopping": "Continue shopping"
+		},
+		"checkoutCard": {
+			"howYouPay": "How you'll pay",
+			"subtotal": "Subtotal",
+			"discountWithPercent": "Discount ({{percent}})",
+			"shipping": "Shipping",
+			"totalItem": "Total ({{count}} item)",
+			"totalItems": "Total ({{count}} items)",
+			"proceedToCheckout": "Proceed to checkout"
+		},
+		"table": {
+			"product": "Product",
+			"price": "Price",
+			"quantity": "Quantity",
+			"total": "Total",
+			"removeProduct": "Remove product"
+		}
+	},
+	"favoritesPage": {
+		"title": "Your Favorites",
+		"emptyTitle": "Nothing here... yet.",
+		"emptyDescription": "Start favoriting items to compare, shop, and keep track of things you love.",
+		"continueShopping": "Continue shopping"
+	},
+	"storeProductsPage": {
+		"title": "Your Products",
+		"emptyTitle": "Nothing here... yet.",
+		"emptyDescription": "Get started by creating your first product.",
+		"addProduct": "Add product",
+		"filterPlaceholder": "Filter products...",
+		"noResults": "No results.",
+		"table": {
+			"selectAll": "Select all",
+			"selectRow": "Select row",
+			"product": "Product",
+			"category": "Category",
+			"price": "Price",
+			"compare": "Compare",
+			"stock": "Stock",
+			"actions": "Actions",
+			"deleteConfirmTitle": "Are you absolutely sure?",
+			"deleteConfirmDescription": "This action cannot be undone. This will permanently delete the product data from our servers."
+		},
+		"form": {
+			"myProducts": "My Products",
+			"product": "Product",
+			"name": "Name",
+			"namePlaceholder": "Short sleeve t-shirt",
+			"description": "Description",
+			"media": "Media",
+			"price": "Price",
+			"priceMinPlaceholder": "Price",
+			"priceMaxPlaceholder": "Compare",
+			"category": "Category",
+			"selectCategory": "Select category",
+			"tags": "Tags",
+			"tagsPlaceholder": "Enter tags"
+		}
+	},
+	"contactPage": {
+		"title": "Contact Us",
+		"subtitle": "Have a question?",
+		"description": "Email us and we'll get back to you within 24 hours. Monday-Saturday",
+		"descriptionFollowup": "Please fill the form below to contact us and we will get back to you as soon as possible. We're happy to answer questions or help.",
+		"name": "Name",
+		"subject": "Subject",
+		"message": "Message",
+		"send": "Send",
+		"sending": "Sending...",
+		"success": "Message sent successfully. Thank you!",
+		"error": "Something went wrong.",
+		"subjectShort": "Subject is too short.",
+		"subjectLong": "Subject is too long."
+	},
+	"form": {
+		"fullName": "Full Name",
+		"email": "Email",
+		"password": "Password",
+		"confirmPassword": "Confirm Password",
+		"forgotPassword": "Forgot your password?"
+	},
+	"buttons": {
+		"cancel": "Cancel",
+		"save": "Save",
+		"saving": "Saving...",
+		"send": "Send",
+		"sending": "Sending...",
+		"update": "Update",
+		"continue": "Continue"
+	},
+	"validation": {
+		"required": "This field is required.",
+		"invalidNumber": "Please enter a valid number.",
+		"mustBePositive": "Must be greater than 0.",
+		"invalidChars": "Invalid characters in name.",
+		"nameShort": "Name is too short.",
+		"nameLong": "Name is too long.",
+		"emailInvalid": "Please enter a valid email address.",
+		"emailTooLong": "Email is too long.",
+		"invalidUrl": "Must be a valid URL.",
+		"imageTooLarge": "Image size exceeds the 4MB limit",
+		"passwordShort": "Password is too short.",
+		"passwordLong": "Password is too long.",
+		"passwordsDontMatch": "Passwords do not match",
+		"sameAsCurrent": "New password cannot be the same as the current password",
+		"maxPriceGteMinPrice": "Max price must be greater than min price"
+	},
+	"dataTable": {
+		"view": "View",
+		"toggleColumns": "Toggle columns",
+		"rowsSelected": "{selected} of {total} row(s) selected.",
+		"rowsPerPage": "Rows per page",
+		"pageOf": "Page {page} of {total}",
+		"goToFirstPage": "Go to first page",
+		"goToPreviousPage": "Go to previous page",
+		"goToNextPage": "Go to next page",
+		"goToLastPage": "Go to last page"
+	},
+	"account": {
+		"settings": "Settings",
+		"personalInfo": {
+			"title": "Personal information",
+			"description": "Manage your personal details and how your profile appears. Enter your information below.",
+			"profilePhoto": "Profile Photo",
+			"changeAvatar": "Change avatar",
+			"deleteAvatar": "Delete avatar",
+			"photoRequirements": "Must be a .jpg, or .png file smaller than 4MB."
+		},
+		"changePassword": {
+			"title": "Change password",
+			"description": "Enter your email below to login to your account",
+			"currentPassword": "Current Password",
+			"newPassword": "New Password",
+			"newPasswordHelp": "Must be at least 8 characters long.",
+			"confirmPassword": "Confirm Password",
+			"confirmPasswordHelp": "Please confirm your password."
+		},
+		"deleteAccount": {
+			"title": "Delete account",
+			"description": "No longer want to use our service? You can delete your account here. This action is not reversible. All information related to this account will be deleted permanently.",
+			"alert": {
+				"trigger": "Yes, delete my account",
+				"title": "Are you absolutely sure?",
+				"description": "This action cannot be undone. This will permanently delete your account and remove your data from our servers."
+			}
+		}
+	},
+	"forgotPasswordPage": {
+		"title": "Reset your password",
+		"description": "Enter the email you use for {{name}} so we can send you a link to reset your password.",
+		"toastTitle": "Check your email for next steps",
+		"toastDescription": "To reset your password, use the link in the email we sent to {{email}}."
+	},
+	"resetPasswordPage": {
+		"title": "Reset password",
+		"description": "Choose a new password below and confirm it. Use the secure link from your email if you opened this page from a reset message.",
+		"successToast": "Your password has been reset. You can sign in with your new password.",
+		"submit": "Reset password",
+		"submitting": "Resetting..."
+	}
+}

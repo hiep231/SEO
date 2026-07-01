@@ -1,0 +1,25 @@
+packages:
+  - api
+  - web
+  - packages/*
+allowBuilds:
+  "@google/genai": true
+  "@nestjs/core": true
+  "@scarf/scarf": true
+  "@swc/core": true
+  esbuild: true
+  msw: true
+  protobufjs: true
+  puppeteer: set this to true or false
+  sharp: true
+  unrs-resolver: true
+onlyBuiltDependencies:
+  - "@google/genai"
+  - "@nestjs/core"
+  - "@scarf/scarf"
+  - "@swc/core"
+  - esbuild
+  - msw
+  - protobufjs
+  - sharp
+  - unrs-resolver

@@ -1,0 +1,357 @@
+{
+	"photoOf": "صورة {{name}}",
+	"from": "من",
+	"to": "إلى",
+	"item": "{{count}} منتج",
+	"items": "{{count}} منتجات",
+	"product": "{{count}} منتج",
+	"products": "{{count}} منتجات",
+	"layout": {
+		"banner": "سجّل الآن واحصل على خصم 20٪ على أول طلب لك.",
+		"signup": "سجّل الآن"
+	},
+	"navigation": {
+		"searchPlaceholder": "ابحث...",
+		"li": {
+			"home": "الرئيسية",
+			"shop": "المتجر",
+			"about": "من نحن",
+			"contact": "اتصل بنا"
+		},
+		"actions": {
+			"language": "اللغة",
+			"store": "متجر البائع",
+			"account": "الحساب",
+			"admin": "الادارة",
+			"messages": "الرسائل",
+			"categories": "الفئات",
+			"logOut": "تسجيل الخروج"
+		}
+	},
+	"languages": {
+		"en": "English",
+		"fr": "Francais",
+		"ar": "العربية"
+	},
+	"home": {
+		"hero": {
+			"titlePrefix": "متجرك الشامل لكل",
+			"titleHighlight": "شيء",
+			"description": "اكتشف منتجات مميزة باسعار تنافسية مع شحن سريع وخدمة عملاء استثنائية.",
+			"shopNow": "تسوق الآن",
+			"freeShipping": "شحن مجاني للطلبات فوق 50$",
+			"support": "دعم العملاء 24/7"
+		},
+		"categories": {
+			"title": "تسوق حسب الفئة",
+			"description": "اعثر على الجهاز المثالي لاحتياجاتك من مجموعاتنا المختارة"
+		},
+		"featuredProducts": "منتجات مميزة",
+		"featuredProductsDescription": "نقدم افضل تجربة تسوق مع مزايا مميزة",
+		"viewAllProducts": "عرض كل المنتجات",
+		"whyChooseUs": {
+			"title": "لماذا تختارنا",
+			"description": "نقدم افضل تجربة تسوق مع مزايا مميزة",
+			"cards": {
+				"freeShipping": {
+					"title": "شحن مجاني",
+					"description": "شحن مجاني على جميع الطلبات التي تزيد عن 50$. توصيل سريع وموثوق حتى باب منزلك."
+				},
+				"secureCheckout": {
+					"title": "دفع آمن",
+					"description": "معلومات الدفع الخاصة بك آمنة دائما معنا. نستخدم تقنيات تشفير رائدة في المجال."
+				},
+				"support": {
+					"title": "دعم 24/7",
+					"description": "فريق دعم العملاء لدينا متاح دائما للمساعدة في اي اسئلة او استفسارات."
+				},
+				"qualityGuarantee": {
+					"title": "ضمان الجودة",
+					"description": "نحن نضمن جودة كل منتج نبيعه. ضمان استرداد الاموال خلال 30 يوما."
+				}
+			}
+		},
+		"testimonials": {
+			"one": "واحد من افضل المشتريات. سهل وعملي وآمن في الاستخدام.",
+			"two": "قطعة انيقة جدا مع واجهة رائعة داخل التطبيق.",
+			"three": "التوصيل كان ممتازا خلال يوم واحد. الدفع كان بسيطا والمنتج مثالي وآمن.",
+			"four": "الاعداد كان سريعا وكل شيء يعمل بشكل ممتاز. اوصي به بشدة."
+		}
+	},
+	"footer": {
+		"description": "متجرك الشامل لكل ما يخص التقنية. منتجات مميزة باسعار تنافسية.",
+		"shopTitle": "المتجر",
+		"allProducts": "كل المنتجات",
+		"companyTitle": "الشركة",
+		"aboutUs": "من نحن",
+		"careers": "الوظائف",
+		"blog": "المدونة",
+		"press": "الصحافة",
+		"contact": "اتصل بنا",
+		"supportTitle": "الدعم",
+		"helpCenter": "مركز المساعدة",
+		"shippingAndReturns": "الشحن والاسترجاع",
+		"warranty": "الضمان",
+		"privacyPolicy": "سياسة الخصوصية",
+		"termsOfService": "شروط الخدمة",
+		"allRightsReserved": "جميع الحقوق محفوظة.",
+		"privacy": "الخصوصية",
+		"terms": "الشروط",
+		"cookies": "ملفات تعريف الارتباط",
+		"sitemap": "خريطة الموقع"
+	},
+	"productPage": {
+		"home": "الرئيسية",
+		"discountOff": "خصم",
+		"accordion": {
+			"description": "الوصف",
+			"shippingRefundPolicy": "سياسة الشحن والاسترجاع",
+			"sellerInformation": "معلومات البائع",
+			"sellingSince": "يبيع منذ"
+		},
+		"dialog": {
+			"trigger": "اكتب مراجعة",
+			"title": "اكتب مراجعة",
+			"description": "يرجى تقييم تجربتك ومشاركة اي ملاحظات اضافية.",
+			"rating": "التقييم",
+			"feedback": "ملاحظات اضافية",
+			"feedbackPlaceholder": "صف تجربتك...",
+			"cancel": "الغاء",
+			"submit": "ارسال",
+			"successToast": "تم ارسال مراجعتك بنجاح!"
+		},
+		"actions": {
+			"addToCart": "اضافة الى السلة",
+			"buyNow": "اشتره الآن",
+			"removeFromFavorites": "ازالة من المفضلة",
+			"addToFavorites": "اضافة الى المفضلة",
+			"previousImage": "الصورة السابقة",
+			"nextImage": "الصورة التالية"
+		},
+		"similarProducts": "منتجات مشابهة",
+		"ratingAndReviews": "التقييمات والمراجعات",
+		"reviewsCount": "{{count}} مراجعة",
+		"noReviewsTitle": "لا يوجد شيء هنا... حتى الآن.",
+		"noReviewsDescription": "العملاء الذين اشتروا هذا المنتج لم يرسلوا اي مراجعات بعد."
+	},
+	"about": {
+		"title": "ما هو {{name}}؟",
+		"communityTitle": "مجتمع يصنع اثرا جيدا",
+		"communityText": "{{name}} سوق عالمي عبر الانترنت يجتمع فيه الناس لصنع وبيع وشراء وجمع المنتجات الفريدة. ونحن ايضا مجتمع يدفع نحو تغيير ايجابي للشركات الصغيرة والناس والكوكب.",
+		"creatorsTitle": "دعم المبدعين المستقلين",
+		"creatorsText": "لا يوجد مستودع لـ {{name}}، بل ملايين الاشخاص الذين يبيعون ما يحبونه. نحن نجعل العملية سهلة ونساعدك على التواصل مباشرة مع المبدعين.",
+		"peaceTitle": "راحة البال",
+		"peaceText": "خصوصيتك هي الاولوية القصوى لفريقنا. واذا احتجت الى المساعدة فنحن دائما جاهزون للدعم.",
+		"question": "هل لديك سؤال؟ تواصل معنا من هنا.",
+		"contact": "اتصل بنا"
+	},
+	"signinPage": {
+		"title": "سجل الدخول الى حسابك",
+		"description": "ادخل بريدك الالكتروني ادناه لتسجيل الدخول الى حسابك",
+		"loggingIn": "جار تسجيل الدخول...",
+		"login": "تسجيل الدخول",
+		"loginWithGoogle": "تسجيل الدخول باستخدام Google",
+		"noAccount": "ليس لديك حساب؟",
+		"signUp": "انشاء حساب"
+	},
+	"signupPage": {
+		"title": "انشاء حساب",
+		"description": "ادخل معلوماتك ادناه لانشاء حسابك",
+		"emailHelp": "سنستخدم هذا البريد للتواصل معك. لن نشارك بريدك الالكتروني مع اي شخص آخر.",
+		"passwordHelp": "يجب ان تتكون من 8 احرف على الاقل.",
+		"confirmPasswordHelp": "يرجى تأكيد كلمة المرور.",
+		"creatingAccount": "جار انشاء الحساب...",
+		"createAccount": "انشاء حساب",
+		"signUpWithGoogle": "انشاء حساب باستخدام Google",
+		"alreadyHaveAccount": "لديك حساب بالفعل؟",
+		"signIn": "تسجيل الدخول"
+	},
+	"productsPage": {
+		"allFilters": "كل الفلاتر",
+		"search": "بحث",
+		"category": "الفئة",
+		"above": "اكثر من",
+		"under": "اقل من",
+		"rating": "التقييم",
+		"showingProducts": "عرض {{count}} منتج",
+		"sortBy": "ترتيب حسب",
+		"sort": {
+			"relevancy": "الاكثر صلة",
+			"mostPopular": "الاكثر شعبية",
+			"lowPrice": "السعر من الاقل",
+			"highPrice": "السعر من الاعلى"
+		},
+		"filters": "الفلاتر",
+		"selectCategory": "اختر فئة",
+		"name": "الاسم",
+		"namePlaceholder": "مثال: دفتر، حائط، وطابعة",
+		"priceRange": "نطاق السعر",
+		"applyFilter": "تطبيق الفلتر"
+	},
+	"cartPage": {
+		"title": "سلتك",
+		"empty": {
+			"title": "لا يوجد شيء هنا... حتى الآن.",
+			"description": "اضف منتجات الى سلتك لتظهر هنا عندما تكون جاهزا للدفع.",
+			"continueShopping": "متابعة التسوق"
+		},
+		"checkoutCard": {
+			"howYouPay": "طريقة الدفع",
+			"subtotal": "المجموع الفرعي",
+			"discountWithPercent": "الخصم ({{percent}})",
+			"shipping": "الشحن",
+			"totalItem": "المجموع ({{count}} منتج)",
+			"totalItems": "المجموع ({{count}} منتجات)",
+			"proceedToCheckout": "المتابعة للدفع"
+		},
+		"table": {
+			"product": "المنتج",
+			"price": "السعر",
+			"quantity": "الكمية",
+			"total": "المجموع",
+			"removeProduct": "حذف المنتج"
+		}
+	},
+	"favoritesPage": {
+		"title": "المفضلة",
+		"emptyTitle": "لا يوجد شيء هنا... حتى الآن.",
+		"emptyDescription": "ابدأ باضافة منتجات الى المفضلة للمقارنة والتسوق والاحتفاظ بما تحب.",
+		"continueShopping": "متابعة التسوق"
+	},
+	"storeProductsPage": {
+		"title": "منتجاتك",
+		"emptyTitle": "لا يوجد شيء هنا... حتى الآن.",
+		"emptyDescription": "ابدأ بإنشاء اول منتج لك.",
+		"addProduct": "اضافة منتج",
+		"filterPlaceholder": "تصفية المنتجات...",
+		"noResults": "لا توجد نتائج.",
+		"table": {
+			"selectAll": "تحديد الكل",
+			"selectRow": "تحديد الصف",
+			"product": "المنتج",
+			"category": "الفئة",
+			"price": "السعر",
+			"compare": "المقارنة",
+			"stock": "المخزون",
+			"actions": "الاجراءات",
+			"deleteConfirmTitle": "هل انت متأكد تماما؟",
+			"deleteConfirmDescription": "لا يمكن التراجع عن هذا الاجراء. سيتم حذف بيانات المنتج نهائيا من خوادمنا."
+		},
+		"form": {
+			"myProducts": "منتجاتي",
+			"product": "منتج",
+			"name": "الاسم",
+			"namePlaceholder": "تي شيرت كم قصير",
+			"description": "الوصف",
+			"media": "الصور",
+			"price": "السعر",
+			"priceMinPlaceholder": "السعر",
+			"priceMaxPlaceholder": "المقارنة",
+			"category": "الفئة",
+			"selectCategory": "اختر فئة",
+			"tags": "الوسوم",
+			"tagsPlaceholder": "ادخل الوسوم"
+		}
+	},
+	"contactPage": {
+		"title": "اتصل بنا",
+		"subtitle": "هل لديك سؤال؟",
+		"description": "راسلنا وسنعود اليك خلال 24 ساعة. من الاثنين الى السبت",
+		"descriptionFollowup": "يرجى ملء النموذج ادناه للتواصل معنا وسنرد عليك في اقرب وقت ممكن. يسعدنا الاجابة عن اسئلتك او مساعدتك.",
+		"name": "الاسم",
+		"subject": "الموضوع",
+		"message": "الرسالة",
+		"send": "ارسال",
+		"sending": "جار الارسال...",
+		"success": "تم ارسال الرسالة بنجاح. شكرا لك!",
+		"error": "حدث خطأ ما.",
+		"subjectShort": "الموضوع قصير جدا.",
+		"subjectLong": "الموضوع طويل جدا."
+	},
+	"form": {
+		"fullName": "الاسم الكامل",
+		"email": "البريد الإلكتروني",
+		"password": "كلمة المرور",
+		"confirmPassword": "تأكيد كلمة المرور",
+		"forgotPassword": "هل نسيت كلمة المرور؟"
+	},
+	"buttons": {
+		"cancel": "الغاء",
+		"save": "حفظ",
+		"saving": "جار الحفظ...",
+		"send": "ارسال",
+		"sending": "جار الارسال...",
+		"update": "تحديث",
+		"continue": "متابعة"
+	},
+	"validation": {
+		"required": "هذا الحقل مطلوب.",
+		"invalidNumber": "يرجى إدخال رقم صالح.",
+		"mustBePositive": "يجب أن يكون أكبر من 0.",
+		"invalidChars": "أحرف غير صالحة في الاسم.",
+		"nameShort": "الاسم قصير جداً.",
+		"nameLong": "الاسم طويل جداً.",
+		"emailInvalid": "يرجى إدخال بريد إلكتروني صالح.",
+		"emailTooLong": "البريد الإلكتروني طويلة جداً.",
+		"invalidUrl": "يجب أن يكون رابطاً صالحاً.",
+		"imageTooLarge": "حجم الصورة يتجاوز حد 4 ميجابايت",
+		"passwordShort": "كلمة المرور قصيرة جداً.",
+		"passwordLong": "كلمة المرور طويلة جداً.",
+		"passwordsDontMatch": "كلمتا المرور غير متطابقتين",
+		"sameAsCurrent": "لا يمكن أن تكون كلمة المرور الجديدة نفس الحالية",
+		"maxPriceGteMinPrice": "يجب أن يكون الحد الأقصى للسعر أكبر من أو يساوي الحد الأدنى"
+	},
+	"dataTable": {
+		"view": "عرض",
+		"toggleColumns": "إظهار/إخفاء الأعمدة",
+		"rowsSelected": "تم تحديد {selected} من {total} صف(وف).",
+		"rowsPerPage": "عدد الصفوف في الصفحة",
+		"pageOf": "الصفحة {page} من {total}",
+		"goToFirstPage": "الذهاب إلى الصفحة الأولى",
+		"goToPreviousPage": "الذهاب إلى الصفحة السابقة",
+		"goToNextPage": "الذهاب إلى الصفحة التالية",
+		"goToLastPage": "الذهاب إلى الصفحة الأخيرة"
+	},
+	"account": {
+		"settings": "الإعدادات",
+		"personalInfo": {
+			"title": "المعلومات الشخصية",
+			"description": "أدر معلوماتك الشخصية ومظهر ملفك الشخصي. أدخل معلوماتك أدناه.",
+			"profilePhoto": "صورة الملف الشخصي",
+			"changeAvatar": "تغيير الصورة",
+			"deleteAvatar": "حذف الصورة",
+			"photoRequirements": "يجب أن تكون صورة .jpg أو .png أصغر من 4 ميجابايت."
+		},
+		"changePassword": {
+			"title": "تغيير كلمة المرور",
+			"description": "أدخل بريدك الإلكتروني أدناه لتسجيل الدخول إلى حسابك",
+			"currentPassword": "كلمة المرور الحالية",
+			"newPassword": "كلمة المرور الجديدة",
+			"newPasswordHelp": "يجب أن تتكون من 8 أحرف على الأقل.",
+			"confirmPassword": "تأكيد كلمة المرور",
+			"confirmPasswordHelp": "يرجى تأكيد كلمة المرور."
+		},
+		"deleteAccount": {
+			"title": "حذف الحساب",
+			"description": "لم تعد تريد استخدام خدماتنا؟ يمكنك حذف حسابك هنا. هذا الإجراء لا رجعة فيه. سيتم حذف جميع المعلومات المتعلقة بهذا الحساب بشكل دائم.",
+			"alert": {
+				"trigger": "نعم، احذف حسابي",
+				"title": "هل أنت متأكد تماماً؟",
+				"description": "لا يمكن التراجع عن هذا الإجراء. سيتم حذف حسابك وبياناتك من خوادمنا بشكل دائم."
+			}
+		}
+	},
+	"forgotPasswordPage": {
+		"title": "أعد تعيين كلمة المرور",
+		"description": "أدخل البريد الإلكتروني الذي تستخدمه مع {{name}} حتى نتمكن من إرسال رابط لإعادة تعيين كلمة المرور.",
+		"toastTitle": "تحقق من بريدك الإلكتروني للخطوات التالية",
+		"toastDescription": "لإعادة تعيين كلمة المرور، استخدم الرابط في البريد الإلكتروني الذي أرسلناه إلى {{email}}."
+	},
+	"resetPasswordPage": {
+		"title": "إعادة تعيين كلمة المرور",
+		"description": "اختر كلمة مرور جديدة أدناه وأكدها. استخدم الرابط الآمن من بريدك الإلكتروني إذا فتحت هذه الصفحة من رسالة إعادة التعيين.",
+		"successToast": "تم إعادة تعيين كلمة المرور. يمكنك تسجيل الدخول بكلمة المرور الجديدة.",
+		"submit": "إعادة تعيين كلمة المرور",
+		"submitting": "جارٍ إعادة التعيين..."
+	}
+}
