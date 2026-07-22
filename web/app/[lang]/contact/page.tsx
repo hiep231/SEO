@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 
 import { useRouter } from "next/navigation";
 
+import { Mail, Map,MapPin, Phone } from "lucide-react";
 import { toast } from "sonner";
 import * as z from "zod";
 
@@ -29,6 +30,7 @@ import { Textarea } from "@/shadcn/components/ui/textarea";
 import { Heading } from "@/shadcn/components/ui/typography";
 import { TypographyP } from "@/shadcn/components/ui/typography";
 
+import config from "@/lib/config";
 import { localizePath } from "@/lib/i18n";
 
 type ContactInput = {
@@ -105,6 +107,62 @@ export default function Page() {
 						<br /> <br />
 						{t("contactPage.descriptionFollowup")}
 					</TypographyP>
+
+					{/* Local SEO Contact Details */}
+					<div className="mt-8 space-y-4">
+						<h3 className="text-xl font-semibold text-foreground border-b pb-2">Thông Tin Trụ Sở</h3>
+						<address className="not-italic space-y-4 text-muted-foreground">
+							{config.address.streetAddress && (
+								<div className="flex items-start gap-3">
+									<MapPin className="h-5 w-5 mt-0.5 text-primary" />
+									<div>
+										<p className="font-medium text-foreground">Địa chỉ</p>
+										<p>
+											{config.address.streetAddress}, {config.address.addressLocality}, {config.address.addressRegion}, {config.address.addressCountry}
+										</p>
+									</div>
+								</div>
+							)}
+							{config.phone && (
+								<div className="flex items-start gap-3">
+									<Phone className="h-5 w-5 mt-0.5 text-primary" />
+									<div>
+										<p className="font-medium text-foreground">Điện thoại</p>
+										<a href={`tel:${config.phone}`} className="hover:text-primary transition-colors">
+											{config.phone}
+										</a>
+									</div>
+								</div>
+							)}
+							{config.email && (
+								<div className="flex items-start gap-3">
+									<Mail className="h-5 w-5 mt-0.5 text-primary" />
+									<div>
+										<p className="font-medium text-foreground">Email</p>
+										<a href={`mailto:${config.email}`} className="hover:text-primary transition-colors">
+											{config.email}
+										</a>
+									</div>
+								</div>
+							)}
+							{config.googleMapsUrl && (
+								<div className="flex items-start gap-3">
+									<Map className="h-5 w-5 mt-0.5 text-primary" />
+									<div>
+										<p className="font-medium text-foreground">Google Maps</p>
+										<a 
+											href={config.googleMapsUrl}
+											target="_blank" 
+											rel="noopener noreferrer"
+											className="text-primary hover:underline"
+										>
+											Xem đường đi trên bản đồ
+										</a>
+									</div>
+								</div>
+							)}
+						</address>
+					</div>
 				</div>
 
 				<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">

@@ -34,7 +34,7 @@ const userProductsPersistConfig = {
 };
 
 const favoritesPersistConfig = {
-	key: "userProducts",
+	key: "favorites",
 	storage,
 };
 

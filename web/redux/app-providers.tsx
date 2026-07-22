@@ -1,11 +1,6 @@
 "use client";
 
-import { createAsyncStoragePersister } from "@tanstack/query-async-storage-persister";
-import { QueryClient } from "@tanstack/react-query";
-import {
-	Persister,
-	PersistQueryClientProvider,
-} from "@tanstack/react-query-persist-client";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import { ReduxProvider } from "./provider";
 
@@ -18,21 +13,14 @@ const queryClient: QueryClient = new QueryClient({
 	},
 });
 
-const persister: Persister = createAsyncStoragePersister({
-	storage: typeof window !== "undefined" ? window.localStorage : undefined,
-});
-
 export default function AppProviders({
 	children,
 }: {
 	children: React.ReactNode;
 }) {
 	return (
-		<PersistQueryClientProvider
-			client={queryClient}
-			persistOptions={{ persister }}
-		>
+		<QueryClientProvider client={queryClient}>
 			<ReduxProvider>{children}</ReduxProvider>
-		</PersistQueryClientProvider>
+		</QueryClientProvider>
 	);
 }

@@ -10,7 +10,7 @@ import { LogoCell } from "@/components/ui/table/cells/logo-cell";
 import { Button } from "@/shadcn/components/ui/button";
 
 import { localizePath } from "@/lib/i18n";
-import { createProductSlug, formatPrice } from "@/lib/string-utils";
+import { formatPrice,getProductPath } from "@/lib/string-utils";
 
 import { DictionaryKeys } from "@/types/i18n.type";
 
@@ -41,13 +41,15 @@ export const getCartColumns = ({
 				?.flatMap((cat) => [...cat.children, cat])
 				.find((cat) => cat._id === row.original.category);
 
+			const productName = row.original.name?.en || row.original.name?.vi || row.original.name?.fr || "product";
+
 			return (
 				<LogoCell
 					href={localizePath(
-						`/product/${createProductSlug(row.original.name.en, row.original._id)}`,
+						getProductPath(productName, row.original._id),
 						locale,
 					)}
-					label={row.original.name[locale]}
+					label={row.original.name?.[locale] || productName}
 					imgUrl={row.original.imgUrl}
 					subcategory={subcategory}
 				/>

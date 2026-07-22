@@ -29,7 +29,7 @@ import { Button } from "@/shadcn/components/ui/button";
 import { Checkbox } from "@/shadcn/components/ui/checkbox";
 
 import { localizePath } from "@/lib/i18n";
-import { createProductSlug, formatPrice } from "@/lib/string-utils";
+import { formatPrice,getProductPath } from "@/lib/string-utils";
 
 import { DictionaryKeys } from "@/types/i18n.type";
 
@@ -199,7 +199,7 @@ const ActionsCell = ({
 					onClick={() => {
 						router.push(
 							localizePath(
-								`/product/${createProductSlug(row.original.name.en, row.original._id)}`,
+								getProductPath(row.original.name.en, row.original._id),
 								locale,
 							),
 						);

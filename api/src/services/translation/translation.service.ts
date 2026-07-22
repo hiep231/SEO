@@ -9,10 +9,11 @@ type TextNodeRef = {
 	path: number[];
 };
 
-const labledLocale = {
+const labledLocale: Record<string, string> = {
 	en: "English",
 	fr: "French",
 	ar: "Arabic",
+	vi: "Vietnamese",
 };
 
 function extractTextNodes(root: any): TextNodeRef[] {
@@ -47,6 +48,7 @@ export class TranslationService {
 			en: "",
 			fr: "",
 			ar: "",
+			vi: "",
 		};
 
 		result[this.defaultLocale] = text;
@@ -69,6 +71,7 @@ export class TranslationService {
 			en: "",
 			fr: "",
 			ar: "",
+			vi: "",
 		};
 
 		result[this.defaultLocale] = json;

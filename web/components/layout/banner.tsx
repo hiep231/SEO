@@ -1,17 +1,18 @@
-"use client";
-
 import Link from "next/link";
 
-import { useI18n } from "@/components/layout/i18n-provider";
+import { Locale } from "@repo/types";
 
-export default function Banner() {
-	const { t } = useI18n();
+import { getDictionary } from "@/lib/dictionaries";
+import { localizePath } from "@/lib/i18n";
+
+export default async function Banner({ locale }: { locale: Locale }) {
+	const dictionary = await getDictionary(locale);
 
 	return (
 		<div className="h-8 md:h-9 text-xs md:text-sm flex justify-center items-center gap-x-1 text-center text-white bg-primary leading-none">
-			{t("layout.banner")}
-			<Link className="underline font-medium" href="/signup">
-				{t("layout.signup")}
+			{dictionary.layout.banner}
+			<Link className="underline font-medium" href={localizePath("/signup", locale)}>
+				{dictionary.layout.signup}
 			</Link>
 		</div>
 	);

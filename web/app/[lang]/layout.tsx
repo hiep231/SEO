@@ -1,10 +1,19 @@
 import "./globals.css";
 
+import { Suspense } from "react";
+
 import { Metadata, Viewport } from "next";
 import { Cairo, Poppins } from "next/font/google";
 import { notFound } from "next/navigation";
 
-import { Organization, WebPage, WebSite, WithContext } from "schema-dts";
+import {
+	BreadcrumbList,
+	LocalBusiness,
+	Organization,
+	WebPage,
+	WebSite,
+	WithContext,
+} from "schema-dts";
 import { Toaster } from "sonner";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -17,6 +26,7 @@ import AppProviders from "@/redux/app-providers";
 
 import AppStateInit from "@/components/layout/app-state-init";
 import Banner from "@/components/layout/banner";
+import SvgSprite from "@/components/ui/svg-sprite";
 import Footer from "@/components/layout/footer";
 import { I18nProvider } from "@/components/layout/i18n-provider";
 import Navigation from "@/components/layout/navigation";
@@ -33,24 +43,24 @@ import { cn } from "@/lib/utils";
 
 const poppins = Poppins({
 	subsets: ["latin"],
-	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+	weight: ["400", "500", "600", "700"],
 	variable: "--font-poppins",
 	display: "swap",
 });
 
 const cairo = Cairo({
 	subsets: ["latin"],
-	weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+	weight: ["400", "500", "600", "700"],
 	variable: "--font-cairo",
 	display: "swap",
 });
 
 export const metadata: Metadata = {
 	title: {
-		default: config.title,
-		template: `%s | ${config.websiteName}`,
+		default: "Mini Setup - Phụ Kiện Công Nghệ | minisetup.page.gd",
+		template: `%s | minisetup.page.gd`,
 	},
-	description: config.description,
+	description: "Chào mừng đến với Mini Setup (minisetup.page.gd). Cửa hàng chuyên cung cấp phụ kiện công nghệ tối giản: sạc GaN, cáp, tai nghe, bàn phím. Nâng tầm góc làm việc của bạn ngay hôm nay!",
 	keywords: config.keywords,
 	authors: [
 		{
@@ -60,12 +70,15 @@ export const metadata: Metadata = {
 	],
 	openGraph: {
 		...generateOgMetadata({
-			title: config.title,
-			description: config.description,
+			title: "Mini Setup - Thế Giới Phụ Kiện | minisetup.page.gd",
+			description: "Ghé thăm Mini Setup (minisetup.page.gd) để tìm kiếm các phụ kiện công nghệ, setup góc làm việc tối giản và chất lượng nhất.",
 			path: "/",
 			type: "website",
 		}),
-		url: undefined,
+		title: "Mini Setup - Thế Giới Phụ Kiện | minisetup.page.gd",
+		description: "Ghé thăm Mini Setup (minisetup.page.gd) để tìm kiếm các phụ kiện công nghệ, setup góc làm việc tối giản và chất lượng nhất.",
+		url: "https://minisetup.page.gd/",
+		type: "website",
 	},
 	twitter: generateTwitterMetadata({
 		title: config.title,
@@ -90,6 +103,11 @@ export const metadata: Metadata = {
 	},
 
 	metadataBase: new URL(config.clientUrl),
+
+	// Google Search Console verification
+	...(config.gscVerification
+		? { verification: { google: config.gscVerification } }
+		: {}),
 };
 
 export const viewport: Viewport = {
@@ -130,8 +148,8 @@ export default async function RootLayout({
 			className={cn(
 				poppins.variable,
 				cairo.variable,
-				locale === "ar" ? cairo.variable : poppins.variable,
-				locale === "ar" ? "font-cairo" : "font-poppins",
+				poppins.variable,
+				"font-poppins",
 			)}
 		>
 			<head>
@@ -148,6 +166,7 @@ export default async function RootLayout({
 			>
 				<AppProviders>
 					<DirectionProvider dir={direction}>
+						<SvgSprite />
 						<I18nProvider dictionary={dictionary} locale={locale}>
 							<AppStateInit />
 							<Analytics />
@@ -155,9 +174,9 @@ export default async function RootLayout({
 							<Toaster />
 							{/* <Chatbot /> */}
 
-							<Banner />
+							<Banner locale={locale} />
 
-							<Navigation />
+							<Navigation locale={locale} />
 
 							{/* Page */}
 							<TooltipProvider>
@@ -169,7 +188,7 @@ export default async function RootLayout({
 					</DirectionProvider>
 				</AppProviders>
 			</body>
-			<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!} />
+			<GoogleAnalytics gaId="G-DMW0E2PQZL" />
 		</html>
 	);
 }
@@ -188,7 +207,9 @@ export function generateHomepageSchema(locale: Locale) {
 		"@context": "https://schema.org",
 		"@graph": [
 			generateOrganizationSchema(locale),
+			generateLocalBusinessSchema(locale),
 			generateEcommerceSchema(locale),
+			generateBreadcrumbSchema(locale),
 			webpage,
 		],
 	};
@@ -201,22 +222,50 @@ export function generateOrganizationSchema(
 		"@context": "https://schema.org",
 		"@type": "Organization",
 		name: config.websiteName,
-		url: localizePath("/", locale),
+		url: localizeUrl("/", locale),
 		logo: config.logo,
 		description: config.description,
 		email: config.email,
-		telephone: config.phone,
+		telephone: config.phone || undefined,
 		sameAs: [
-			config.social.twitter,
-			config.social.instagram,
-			config.social.youtube,
+			config.social?.facebook,
+			(config.social as any)?.youtube,
 		].filter(Boolean),
 		contactPoint: {
 			"@type": "ContactPoint",
 			contactType: "Customer Service",
 			email: config.email,
-			telephone: config.phone,
+			telephone: config.phone || undefined,
 		},
+	};
+}
+
+export function generateLocalBusinessSchema(
+	locale: Locale,
+): WithContext<LocalBusiness> {
+	return {
+		"@context": "https://schema.org",
+		"@type": "LocalBusiness",
+		name: config.websiteName,
+		url: localizeUrl("/", locale),
+		image: config.openGraphImage,
+		logo: config.logo,
+		description: config.description,
+		email: config.email,
+		telephone: config.phone || undefined,
+		address: {
+			"@type": "PostalAddress",
+			streetAddress: config.address.streetAddress || undefined,
+			addressLocality: config.address.addressLocality,
+			addressRegion: config.address.addressRegion,
+			postalCode: config.address.postalCode,
+			addressCountry: config.address.addressCountry,
+		},
+		hasMap: config.googleMapsUrl,
+		sameAs: [
+			config.social?.facebook,
+			(config.social as any)?.youtube,
+		].filter(Boolean),
 	};
 }
 
@@ -237,8 +286,33 @@ export function generateEcommerceSchema(locale: Locale): WithContext<WebSite> {
 					locale,
 				),
 			},
-			query: "required name=search_term_string",
+			// @ts-ignore - query-input is required by Google but not in schema-dts
+			"query-input": "required name=search_term_string",
 		},
 		publisher: generateOrganizationSchema(locale),
 	};
 }
+
+export function generateBreadcrumbSchema(
+	locale: Locale,
+): WithContext<BreadcrumbList> {
+	return {
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		itemListElement: [
+			{
+				"@type": "ListItem",
+				position: 1,
+				name: locale === "vi" ? "Trang chủ" : "Home",
+				item: localizeUrl("/", locale),
+			},
+			{
+				"@type": "ListItem",
+				position: 2,
+				name: locale === "vi" ? "Phụ Kiện Công Nghệ" : "Tech Accessories",
+				item: localizeUrl("/products", locale),
+			},
+		],
+	};
+}
+

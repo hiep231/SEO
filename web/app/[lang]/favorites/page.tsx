@@ -43,7 +43,12 @@ export default function Page() {
 				{items.length > 0 ? (
 					<div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4 lg:gap-4">
 						{items.map((item) => (
-							<ProductCard data={item} key={item._id} />
+							<ProductCard 
+								data={item} 
+								key={item._id} 
+								locale={locale as any}
+								dictionary={{ productPage: { actions: { addToCart: t("productPage.actions.addToCart"), addToFavorites: t("productPage.actions.addToFavorites"), removeFromFavorites: t("productPage.actions.removeFromFavorites") } } }}
+							/>
 						))}
 					</div>
 				) : (
@@ -57,7 +62,7 @@ export default function Page() {
 						<EmptyContent>
 							<Button
 								variant="outline"
-								onClick={() => router.push(localizePath("/products", locale))}
+								onClick={() => router.push(localizePath("/", locale))}
 							>
 								{t("favoritesPage.continueShopping")}
 							</Button>

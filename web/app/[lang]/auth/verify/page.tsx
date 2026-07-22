@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 import { useSearchParams } from "next/navigation";
 
@@ -8,7 +8,7 @@ import { authService } from "@/services/auth-service";
 
 import { Container } from "@/components/common/container";
 
-export default function Page() {
+function VerifyPageContent() {
 	const searchParams = useSearchParams();
 
 	const [loading, setLoading] = useState(true);
@@ -36,5 +36,13 @@ export default function Page() {
 				<>You&apos;re email is {emailVerified ? "verified" : "not verified"}</>
 			)}
 		</Container>
+	);
+}
+
+export default function Page() {
+	return (
+		<Suspense>
+			<VerifyPageContent />
+		</Suspense>
 	);
 }

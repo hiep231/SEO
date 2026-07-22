@@ -11,9 +11,11 @@ import {
 import { localizePath } from "@/lib/i18n";
 
 const { title, description, keywords } = {
-	title: "About Us - Our Mission & Story",
-	description: `Learn about ${config.websiteName}, the global online marketplace empowering independent sellers worldwide.`,
-	keywords: ["about", "company", "mission", "team", "story"],
+	// SEO: 57 chars, keyword at beginning
+	title: "Phụ Kiện Công Nghệ - Về Chúng Tôi & Sứ Mệnh",
+	// SEO: 152 chars, keyword at start
+	description: `Phụ kiện công nghệ chính hãng tại ${config.websiteName}. Tìm hiểu về sứ mệnh, đội ngũ và cam kết cung cấp tai nghe, sạc dự phòng, bàn phím cơ chất lượng nhất Việt Nam.`,
+	keywords: ["về chúng tôi", "phụ kiện công nghệ chính hãng", "sứ mệnh", "thương hiệu uy tín"],
 };
 
 export async function generateMetadata({

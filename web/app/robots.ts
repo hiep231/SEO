@@ -2,11 +2,14 @@ import { MetadataRoute } from "next";
 
 import config from "@/lib/config";
 
+export const dynamic = "force-static";
+
 export default function robots(): MetadataRoute.Robots {
 	return {
 		rules: [
 			{
 				userAgent: "*",
+				allow: "/",
 				disallow: [
 					"/*/account",
 					"/*/signin",
@@ -18,9 +21,8 @@ export default function robots(): MetadataRoute.Robots {
 					"/*/admin",
 					"/*/forgot-password",
 					"/*/reset-password",
-					"/*/auth",
+				"/*/auth",
 				],
-				crawlDelay: 1,
 			},
 		],
 		sitemap: [`${config.clientUrl}/sitemap.xml`],

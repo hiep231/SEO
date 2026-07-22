@@ -4,18 +4,16 @@ import config from "./config";
 
 export const defaultLocale: Locale = "en";
 
-export const rtlLocales: Locale[] = ["ar"];
+export const rtlLocales: Locale[] = [];
 
 export const intlLocales: Record<Locale, string> = {
 	en: "en-US",
-	fr: "fr-FR",
-	ar: "ar-MA",
+	vi: "vi-VN",
 };
 
 export const localeLabels: Record<Locale, string> = {
 	en: "English",
-	fr: "Francais",
-	ar: "العربية",
+	vi: "Tiếng Việt",
 };
 
 export function hasLocale(maybeLocale: string) {

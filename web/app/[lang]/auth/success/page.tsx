@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 
 import { useSearchParams } from "next/navigation";
 
@@ -8,7 +8,7 @@ import { Container } from "@/components/common/container";
 
 import { useAuth } from "@/hooks/use-auth";
 
-export default function Page() {
+function SuccessPageContent() {
 	const searchParams = useSearchParams();
 
 	const { googleAuth } = useAuth();
@@ -25,5 +25,13 @@ export default function Page() {
 		<Container>
 			<p>Logging you in...</p>
 		</Container>
+	);
+}
+
+export default function Page() {
+	return (
+		<Suspense>
+			<SuccessPageContent />
+		</Suspense>
 	);
 }

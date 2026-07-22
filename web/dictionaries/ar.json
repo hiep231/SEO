@@ -167,6 +167,7 @@
 		"signIn": "تسجيل الدخول"
 	},
 	"productsPage": {
+		"title": "المنتجات",
 		"allFilters": "كل الفلاتر",
 		"search": "بحث",
 		"category": "الفئة",

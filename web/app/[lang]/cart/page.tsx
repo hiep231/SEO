@@ -64,7 +64,7 @@ export default function Page() {
 						<EmptyContent>
 							<Button
 								variant="outline"
-								onClick={() => router.push(localizePath("/products", locale))}
+								onClick={() => router.push(localizePath("/", locale))}
 							>
 								{t("cartPage.empty.continueShopping")}
 							</Button>

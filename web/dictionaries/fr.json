@@ -167,6 +167,7 @@
 		"signIn": "Se connecter"
 	},
 	"productsPage": {
+		"title": "Produits",
 		"allFilters": "Tous les filtres",
 		"search": "Recherche",
 		"category": "Categorie",

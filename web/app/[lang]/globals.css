@@ -25,6 +25,9 @@
 }
 
 @theme inline {
+	/* default font */
+	--font-sans: var(--font-custom, var(--font-poppins, ui-sans-serif, system-ui, sans-serif));
+
 	/* custom filters */
 	--filter-primary: brightness(0) saturate(100%) invert(30%) sepia(85%)
 		saturate(1559%) hue-rotate(146deg) brightness(99%) contrast(101%);
@@ -145,6 +148,7 @@
 }
 
 .font-poppins {
+	--font-custom: var(--font-poppins);
 	font-family: var(--font-poppins), sans-serif;
 
 	[data-sonner-toaster] {
@@ -153,6 +157,7 @@
 }
 
 .font-cairo {
+	--font-custom: var(--font-cairo);
 	font-family: var(--font-cairo), sans-serif;
 
 	[data-sonner-toaster] {

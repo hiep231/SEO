@@ -43,12 +43,18 @@ export function useCartPage() {
 		}
 
 		const subtotalValue = items.reduce(
-			(acc, item) => acc + (item.product.priceCompare * item.quantity) / 100,
+			(acc, item) => {
+				if (!item.product) return acc;
+				return acc + ((item.product.priceCompare || item.product.price || 0) * item.quantity) / 100;
+			},
 			0,
 		);
 
 		const totalValue = items.reduce(
-			(acc, item) => acc + (item.product.price * item.quantity) / 100,
+			(acc, item) => {
+				if (!item.product) return acc;
+				return acc + ((item.product.price || 0) * item.quantity) / 100;
+			},
 			0,
 		);
 
@@ -80,12 +86,14 @@ export function useCartPage() {
 		},
 	});
 
-	const tableData: CartItem[] = items.map((item) => ({
-		...item.product,
-		imgUrl: item.product.imgUrls[0],
-		quantity: item.quantity,
-		total: item.product.price * item.quantity,
-	}));
+	const tableData: CartItem[] = items
+		.filter((item) => item.product)
+		.map((item) => ({
+			...item.product,
+			imgUrl: item.product.imgUrls?.[0] || "",
+			quantity: item.quantity,
+			total: (item.product.price || 0) * item.quantity,
+		}));
 
 	const checkout: React.MouseEventHandler<HTMLButtonElement> = async (
 		event,

@@ -1,17 +1,48 @@
-const withPWA = require("next-pwa")({
-	dest: "public",
-	register: true,
-	skipWaiting: true,
-	scope: "/app",
-	sw: "sw.js",
-	disable: process.env.NODE_ENV === "development",
-});
+// module.exports = {
+// 	turbopack: {},
+// 	reactStrictMode: true,
+// 	images: {
+// 		remotePatterns: [
+// 			{
+// 				protocol: "https",
+// 				hostname: "res.cloudinary.com",
+// 			},
+// 			{
+// 				protocol: "https",
+// 				hostname: "i.etsystatic.com",
+// 			},
+// 			{
+// 				protocol: "https",
+// 				hostname: "cdn.hstatic.net",
+// 			},
+// 			{
+// 				protocol: "https",
+// 				hostname: "theme.hstatic.net",
+// 			},
+// 			{
+// 				protocol: "https",
+// 				hostname: "product.hstatic.net",
+// 			},
+// 			{
+// 				protocol: "https",
+// 				hostname: "images.unsplash.com",
+// 			},
+// 			{
+// 				protocol: "https",
+// 				hostname: "images.dmca.com",
+// 			},
+// 		],
+// 		formats: ["image/avif", "image/webp"],
+// 	},
+// };
 
-module.exports = withPWA({
+module.exports = {
+	output: "export",
+	trailingSlash: true,
 	turbopack: {},
-	cacheComponents: true,
 	reactStrictMode: true,
 	images: {
+		unoptimized: true,
 		remotePatterns: [
 			{
 				protocol: "https",
@@ -33,7 +64,11 @@ module.exports = withPWA({
 				protocol: "https",
 				hostname: "images.unsplash.com",
 			},
+			{
+				protocol: "https",
+				hostname: "images.dmca.com",
+			},
 		],
 		formats: ["image/avif", "image/webp"],
 	},
-});
+};

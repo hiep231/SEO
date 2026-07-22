@@ -5,6 +5,8 @@ import { LogoCell } from "@/components/ui/table/cells/logo-cell";
 
 import { Checkbox } from "@/shadcn/components/ui/checkbox";
 
+import { getCategoryPath } from "@/lib/string-utils";
+
 export const getCategoriesColumns = ({
 	locale,
 	categories,
@@ -42,12 +44,9 @@ export const getCategoriesColumns = ({
 		type: "custom",
 		className: "w-[40%]",
 		render: (value, row) => {
-			const params = new URLSearchParams();
-			params.set("category", row.slug);
-
 			return (
 				<LogoCell
-					href={`/products?${params.toString()}`}
+					href={`/en${getCategoryPath(row.slug)}`}
 					label={row.name[locale]}
 					imgUrl={value}
 				/>

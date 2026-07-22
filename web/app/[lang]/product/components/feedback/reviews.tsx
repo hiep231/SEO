@@ -1,0 +1,104 @@
+"use client";
+
+import { useMemo } from "react";
+
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+
+import { ProductWithReviewsEntity } from "@repo/types";
+
+import { useI18n } from "@/components/layout/i18n-provider";
+import Stars from "@/components/ui/stars";
+
+import {
+	Avatar,
+	AvatarFallback,
+	AvatarImage,
+} from "@/shadcn/components/ui/avatar";
+import {
+	Empty,
+	EmptyDescription,
+	EmptyHeader,
+	EmptyTitle,
+} from "@/shadcn/components/ui/empty";
+import { TypographyMuted } from "@/shadcn/components/ui/typography";
+
+import { localizePath } from "@/lib/i18n";
+import { initials, stringToDate } from "@/lib/string-utils";
+
+export default function Reviews({
+	product,
+}: {
+	product: ProductWithReviewsEntity;
+}) {
+	const { locale, t } = useI18n();
+	const router = useRouter();
+
+	const reviews = useMemo(
+		() => product.reviews?.filter((review) => !!review.description),
+		[product],
+	);
+
+	return (
+		<div>
+			{reviews?.length > 0 ? (
+				reviews?.map((review, i) => (
+					<div key={`review ${i}`} className="mb-8 last:mb-0 flex">
+						<Avatar className="me-2 h-8 w-8">
+							<AvatarImage
+								role="button"
+								className="cursor-pointer"
+								src={review.user.photoUrl}
+								alt={t("photoOf").replace("{{name}}", review.user.name)}
+								onClick={() =>
+									router.push(localizePath(`/user/${review.user._id}`, locale))
+								}
+								loading="lazy"
+							/>
+							<AvatarFallback role="button" className="cursor-pointer">
+								{initials(review.user.name)}
+							</AvatarFallback>
+						</Avatar>
+
+						<div>
+							<div className="leading-none mb-0.5 text-sm">
+								<Link
+									href={localizePath(`/user/${review.user._id}`, locale)}
+									className="hover:underline"
+								>
+									{review.user.name}
+								</Link>
+								&ensp;
+								<span className="text-muted-foreground">
+									{stringToDate(review.createdAt)}
+								</span>
+							</div>
+							<Stars
+								className="mb-1"
+								size={14}
+								value={review.rating}
+								displayTotal={false}
+							/>
+							<TypographyMuted className="text-sm">
+								{review.description?.[locale]}
+							</TypographyMuted>
+						</div>
+					</div>
+				))
+			) : (
+				<Empty className="border border-dashed h-full">
+					<EmptyHeader>
+						<EmptyTitle>{t("productPage.noReviewsTitle")}</EmptyTitle>
+						<EmptyDescription className="max-w-md text-pretty mt-2">
+							Hiện tại sản phẩm này chưa có đánh giá từ người dùng. Tuy nhiên, 
+							bạn hoàn toàn có thể yên tâm về chất lượng vì tất cả sản phẩm 
+							đều trải qua quy trình kiểm định nghiêm ngặt và đạt tiêu chuẩn cao nhất 
+							trước khi đến tay khách hàng. Hãy trải nghiệm và trở thành người đầu tiên 
+							để lại nhận xét chi tiết, giúp cộng đồng có thêm góc nhìn khách quan nhé!
+						</EmptyDescription>
+					</EmptyHeader>
+				</Empty>
+			)}
+		</div>
+	);
+}

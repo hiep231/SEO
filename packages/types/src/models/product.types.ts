@@ -9,6 +9,7 @@ export type TranslatedText = {
 	en: string;
 	fr: string;
 	ar: string;
+	vi: string;
 };
 
 export type BrowserFileLike = {

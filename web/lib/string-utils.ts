@@ -5,6 +5,10 @@ import { intlLocales } from "@/lib/i18n";
 const currency = process.env.NEXT_PUBLIC_CURRENCY || "USD";
 
 export function formatPrice(amount: number, locale: Locale): string {
+	if (currency === "VND") {
+		return new Intl.NumberFormat(intlLocales[locale]).format(amount) + " đ";
+	}
+
 	const formatted = new Intl.NumberFormat(intlLocales[locale], {
 		style: "currency",
 		currency,
@@ -42,4 +46,20 @@ export function createProductSlug(name: string, id: string): string {
 		.replace(/(^-|-$)/g, "");
 
 	return `${slug}-${id}`;
+}
+
+/**
+ * Generate the SEO-friendly product URL path (without locale prefix).
+ * Format: /product/{name-slug}-{id}
+ */
+export function getProductPath(name: string, id: string): string {
+	return `/product/${createProductSlug(name, id)}`;
+}
+
+/**
+ * Generate the SEO-friendly category URL path (without locale prefix).
+ * Format: /category/{slug}
+ */
+export function getCategoryPath(slug: string): string {
+	return `/category/${slug}`;
 }

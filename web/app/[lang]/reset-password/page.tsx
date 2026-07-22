@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { useForm } from "react-hook-form";
 
 import { useRouter, useSearchParams } from "next/navigation";
@@ -37,7 +38,7 @@ import { Spinner } from "@/shadcn/components/ui/spinner";
 
 import { localizePath } from "@/lib/i18n";
 
-export default function Page() {
+function ResetPasswordContent() {
 	const searchParams = useSearchParams();
 
 	const { locale, t } = useI18n();
@@ -165,5 +166,13 @@ export default function Page() {
 				</Card>
 			</Section>
 		</Container>
+	);
+}
+
+export default function Page() {
+	return (
+		<Suspense>
+			<ResetPasswordContent />
+		</Suspense>
 	);
 }

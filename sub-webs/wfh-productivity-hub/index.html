@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WFH Productivity Hub</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          corporate: {
+            blue: '#0f4c81', // Classic blue
+            light: '#f4f5f7',
+            grey: '#4a5568'
+          }
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-corporate-light font-sans text-corporate-grey flex flex-col min-h-screen">
+  
+  <nav class="bg-white shadow-sm py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+      <div class="text-2xl font-bold text-corporate-blue tracking-tight">WFH Hub</div>
+      <div class="space-x-6 text-sm font-semibold">
+        <a href="#" class="hover:text-corporate-blue transition">Gear</a>
+        <a href="#" class="hover:text-corporate-blue transition">Articles</a>
+        <a href="#" class="bg-corporate-blue text-white px-4 py-2 rounded-md hover:bg-blue-800 transition">Newsletter</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-corporate-blue py-24 text-center text-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Maximize your Work-From-Home output</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Elevate your remote work experience with professional setups, essential gear, and proven productivity strategies.</p>
+      <button class="bg-white text-corporate-blue font-bold py-3 px-8 rounded shadow hover:bg-gray-100 transition">Get Started</button>
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 lg:grid-cols-3 gap-12">
+    
+    <div class="lg:col-span-2">
+      <article class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Why a dedicated workspace matters</h2>
+        <div class="prose prose-lg text-gray-600 max-w-none space-y-5">
+          <p>
+            When working from home, the boundary between professional and personal life often blurs. A dedicated workspace serves as a psychological trigger: when you sit down at that specific desk, your brain knows it's time to focus. It eliminates the friction of setting up and packing away your laptop every day at the kitchen table.
+          </p>
+          <p>
+            Furthermore, a dedicated area allows you to optimize ergonomics, control your lighting for video calls, and minimize household distractions. It is an investment in your career longevity and mental well-being. For those with limited space, a compact footprint can be just as effective. Ensure you check out curated tech gear to build the <a href="https://minisetup.page.gd/en/" class="text-corporate-blue font-semibold hover:underline">ultimate WFH mini setup</a>.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <aside>
+      <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 mb-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-4 border-b pb-2">Essential Gear Checklist</h3>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <div>
+              <span class="font-semibold text-gray-900 block">Fast Charger (65W+)</span>
+              <span class="text-sm text-gray-500">Keep all your devices powered efficiently.</span>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <div>
+              <span class="font-semibold text-gray-900 block">1080p Webcam</span>
+              <span class="text-sm text-gray-500">Look professional on every Zoom call.</span>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <div>
+              <span class="font-semibold text-gray-900 block">Noise-Canceling Headphones</span>
+              <span class="text-sm text-gray-500">Block out background noise instantly.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+  </main>
+
+  <footer class="bg-gray-50 border-t border-gray-200 py-8 text-center mt-auto">
+    <p class="text-sm text-gray-500">&copy; 2026 WFH Productivity Hub. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

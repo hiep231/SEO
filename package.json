@@ -1,7 +1,7 @@
 {
 	"packageManager": "pnpm@11.0.8",
 	"scripts": {
-		"build": "turbo run build",
+		"build": "set NODE_OPTIONS=--max-old-space-size=8192 && turbo run build",
 		"dev": "turbo run dev",
 		"lint": "turbo run lint",
 		"format": "prettier --write \"**/*.{ts,tsx}\"",
@@ -10,5 +10,10 @@
 	"devDependencies": {
 		"@repo/eslint-config": "workspace:*",
 		"turbo": "^2.9.9"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"puppeteer"
+		]
 	}
 }

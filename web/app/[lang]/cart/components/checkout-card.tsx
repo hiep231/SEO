@@ -19,7 +19,7 @@ import { useCartPage } from "../use-cart";
 
 export default function CheckoutCard() {
 	const { t, locale } = useI18n();
-	const router = useRouter();
+	const { checkout } = useCartPage();
 
 	return (
 		<Card className="md:w-1/3 h-fit rounded-md">
@@ -29,7 +29,7 @@ export default function CheckoutCard() {
 
 				<Button
 					className="w-full"
-					onClick={() => router.push(localizePath("/signin", locale))}
+					onClick={checkout}
 				>
 					{t("cartPage.checkoutCard.proceedToCheckout")}
 				</Button>
